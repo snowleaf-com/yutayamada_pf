@@ -1,0 +1,11 @@
+services:
+  vue-app:
+    build:
+      context: .
+    ports:
+      - "8082:8080" # ホストの8080をコンテナの8080にマッピング
+    volumes:
+      - .:/app # ローカルのソースコードをコンテナ内にマウント
+      - /app/node_modules # node_modulesのキャッシュをコンテナ内で利用
+    environment:
+      - NODE_ENV=development
