@@ -6,6 +6,65 @@
       </v-col>
     </v-row>
 
+    <v-expansion-panels class="mb-2">
+      <v-expansion-panel>
+        <v-expansion-panel-header class="font1">
+          スキルレベルについて（自己採点）
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <v-tabs>
+            <!-- Tabs for switching content -->
+            <v-tab>
+              <v-icon left>mdi-note</v-icon>
+              25
+            </v-tab>
+            <v-tab>
+              <v-icon left>mdi-note</v-icon>
+              50
+            </v-tab>
+            <v-tab>
+              <v-icon left>mdi-note</v-icon>
+              75
+            </v-tab>
+            <v-tab>
+              <v-icon left>mdi-note</v-icon>
+              100
+            </v-tab>
+
+            <!-- Tab items with content -->
+            <v-tab-item>
+              <v-card flat>
+                <v-card-text>
+                  初学者レベル - 基本的な文法や使い方は理解しているが、応用は難しい段階。
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+            <v-tab-item>
+              <v-card flat>
+                <v-card-text>
+                  基礎的なタスクをこなせるレベル - 個人開発で活用経験があり、小規模なシステムを構築可能。
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+            <v-tab-item>
+              <v-card flat>
+                <v-card-text>
+                  実務を想定したレベル - 業務での使用を想定し、チーム開発でも問題なく対応できると想定。
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+            <v-tab-item>
+              <v-card flat>
+                <v-card-text>
+                  経験豊富なプロフェッショナルレベル - 豊富な経験と実績があり、高度な要件にも柔軟に対応可能。
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+          </v-tabs>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
+
     <v-row justify="center" align-content="center">
       <v-col
         v-for="(item, i) in items"
@@ -72,17 +131,17 @@
     mounted () {
       let timesRun = 0;
       this.interval = setInterval(() => {
-        if(timesRun === 10) {
+        if(timesRun === 20) {
             clearInterval(this.interval);
             return;
         }
         timesRun += 1;
         this.items.forEach( item => {
           if (item.value !== item.limit) {
-            item.value += 10
+            item.value += 5
           }
         });
-      }, 300)
+      }, 100)
     },
   beforeDestroy() {
     clearInterval(this.interval)
@@ -93,77 +152,91 @@
       {
         title: 'HTML',
         comment: '',
-        color: 'orange',
+        color: '#F9A489',
         src: require('@/assets/images/html-5.svg'),
-        limit: 70,
+        limit: 75,
         value: 0,
       },
       {
         title: 'CSS',
         comment: '',
-        color: 'blue',
+        color: '#6FAAD6',
         src: require('@/assets/images/css-3.svg'),
-        limit: 50,
+        limit: 75,
         value: 0,
-      },
-      {
-        title: 'Sass',
-        comment: '',
-        color: '#e29fbd',
-        src: require('@/assets/images/sass.svg'),
-        limit: 50,
-        value: 0,
-
       },
       {
         title: 'PHP',
         comment: '',
-        color: '#4F5D95',
+        color: '#B2B9D8',
         src: require('@/assets/images/php.svg'),
-        limit: 70,
+        limit: 75,
         value: 0,
-
-      },
-      {
-        title: 'JavaScript',
-        comment: '',
-        color: '#f1e05a',
-        src: require('@/assets/images/javascript.svg'),
-        limit: 50,
-        value: 0,
-
+        
       },
       {
         title: 'Laravel',
         comment: '',
-        color: '#fc817f',
+        color: '#FF8E87',
         src: require('@/assets/images/laravel.svg'),
-        limit: 60,
+        limit: 50,
         value: 0,
-
+      },
+      {
+        title: 'JavaScript',
+        comment: '',
+        color: '#FFF3A6',
+        src: require('@/assets/images/javascript.svg'),
+        limit: 75,
+        value: 0,
+        
+      },
+      {
+        title: 'TypeScript',
+        comment: '',
+        color: '#80ACDE',
+        src: require('@/assets/images/Typescript_logo_2020.svg'),
+        limit: 50,
+        value: 0,
+      },
+      {
+        title: 'React.js',
+        comment: '',
+        color: '#A8EAFD',
+        src: require('@/assets/images/React-icon.svg'),
+        limit: 50,
+        value: 0,
+      },
+      {
+        title: 'Next.js',
+        comment: '',
+        color: '#6D6D6D',
+        src: require('@/assets/images/Nextjs-logo.svg'),
+        limit: 50,
+        value: 0,
       },
       {
         title: 'Vue.js',
         comment: '',
-        color: '#199f4b',
+        color: '#9FDEC3',
         src: require('@/assets/images/vue.svg'),
-        limit: 40,
+        limit: 50,
         value: 0,
 
       },
       {
         title: 'MySQL',
         comment: '',
-        color: '#124e78',
+        color: '#8BB1C8',
         src: require('@/assets/images/mysql.svg'),
-        limit: 60,
+        limit: 75,
         value: 0,
 
       },
       {
         title: 'AmazonWebService',
         comment: '',
-        color: '#f6b33f',
+        color: '#FFC966',
         src: require('@/assets/images/ss7.svg'),
         limit: 50,
         value: 0,
@@ -172,29 +245,44 @@
       {
         title: 'Docker',
         comment: '',
-        color: '#59acf3',
+        color: '#84C3F2',
         src: require('@/assets/images/docker-icon.svg'),
-        limit: 50,
+        limit: 75,
         value: 0,
 
       },
       {
         title: 'Git',
         comment: '',
-        color: '#f18080',
+        color: '#F59A80',
         src: require('@/assets/images/git-icon.svg'),
-        limit: 30,
+        limit: 75,
         value: 0,
 
       },
       {
-        title: 'AdobeXD',
+        title: 'Adobe XD',
         comment: '',
-        color: '#F82CF4',
+        color: '#FFA3F8',
         src: require('@/assets/images/adobexd.svg'),
         limit: 50,
         value: 0,
-
+      },
+      {
+        title: 'Adobe Illustrator',
+        comment: '',
+        color: '#FFC766',
+        src: require('@/assets/images/Adobe_Illustrator_CC_icon.svg'),
+        limit: 75,
+        value: 0,
+      },
+      {
+        title: 'Adobe Photoshop',
+        comment: '',
+        color: '#8CCBFF',
+        src: require('@/assets/images/Adobe_Photoshop_CC_icon.svg'),
+        limit: 50,
+        value: 0,
       },
     ]
   })

@@ -50,7 +50,7 @@
 
 
   .font1 {
-    font-family: 'MuseoModerno', 'M PLUS 1p', sans-serif;;
+    font-family: 'MuseoModerno', 'M PLUS 1p', sans-serif;
   }
 
   .text-content {

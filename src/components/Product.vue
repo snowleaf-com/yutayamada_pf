@@ -69,7 +69,8 @@
 <!--            >-->
 <!--              <v-icon size="20px">mdi-book-open-page-variant</v-icon>-->
 <!--            </v-btn>-->
-            <span class="bottom">{{ item.date }}</span></v-card-subtitle>
+            <!-- <span class="bottom">{{ item.date }}</span> -->
+          </v-card-subtitle>
 
           <v-card-text class="text--primary">
             <div class="text-height text-content">{{ item.comment }}</div>
@@ -131,7 +132,7 @@
             link: 'https://snow-leaf.com/typinggame/',
             github: 'https://github.com/snowleaf-com/typinggame',
             isGitHub: true,
-            date: '2021/07',
+            date: '2021/11',
             tags: [
               {
                 color: '#FF2D20',
@@ -229,11 +230,11 @@
           },
           {
             title: '計算アプリ（iOSアプリ）',
-            comment: '計算アプリのiOS向けを開発しました。金銭面の都合でApp Storeへの公開は行っていませんが、Xcodeを用いて動作確認を実施しています。',
-            src: require('@/assets/images/ss11.jpg'),
-            link: '',
-            github: 'https://github.com/waiwaiblog/gelandecom',
-            isGitHub: true,
+            comment: '計算サイトのiOS向けを開発しました。金銭面の都合でApp Storeへの公開は行っていませんが、Xcodeを用いて動作確認を実施しています。',
+            src: require('@/assets/images/ss12.png'),
+            link: 'https://snow-leaf.com/programming/smartphone_app/',
+            github: '',
+            isGitHub: false,
             date: '2020/03',
             tags: [
               {
