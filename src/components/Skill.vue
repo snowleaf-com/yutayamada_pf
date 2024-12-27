@@ -131,7 +131,7 @@
     mounted () {
       let timesRun = 0;
       this.interval = setInterval(() => {
-        if(timesRun === 20) {
+        if(timesRun === 15) {
             clearInterval(this.interval);
             return;
         }
@@ -141,7 +141,7 @@
             item.value += 5
           }
         });
-      }, 100)
+      }, 50)
     },
   beforeDestroy() {
     clearInterval(this.interval)
@@ -288,3 +288,8 @@
   })
   }
 </script>
+<style>
+.v-tabs:not(.v-tabs--vertical):not(.v-tabs--right) > .v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(.v-slide-group--has-affixes) .v-slide-group__prev {
+    display: none; /* 完全に非表示にする */
+}
+</style>
